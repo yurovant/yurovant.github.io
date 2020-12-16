@@ -19,7 +19,7 @@
 
       body {
         font-size: 15px;
-        line-height: 1.1;
+        line-height: 1.2;
         font-family: Roboto, Helvetica, Ubuntu, Tahoma, sans-serif;
       }
 
@@ -52,7 +52,6 @@
       }
 
       p {
-        margin-bottom: .5em;
         line-height: 1.3;
       }
 
@@ -61,6 +60,7 @@
       }
 
       small {
+        display: block;
         font-size: .85em;
       }
 
@@ -81,12 +81,10 @@
       \*----------------------------------------------------------------------------*/
 
       .container {
-        margin-right: auto;
-        margin-left: auto;
+        max-width: 1366px;
+        margin: 0 auto;
         padding-left: 15px;
         padding-right: 15px;
-        width: 1366px;
-        margin: auto;
       }
 
       .row {
@@ -215,7 +213,7 @@
       }
 
       .keys--descr {
-        max-width: 313px;
+        max-width: 50%;
       }
 
       .keys--descr small {
@@ -223,31 +221,8 @@
       }
 
       .keys--os {
-        max-width: 313px;
+        max-width: 50%;
         padding-left: 20px;
-      }
-
-      .clarification {
-        width: 100%;
-        font-size: .85em;
-        line-height: 1.3;
-        background-color: #FAE4A1;
-        color: #000;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        height: 1px;
-        overflow: hidden;
-        transition: opacity .4s;
-      }
-
-      .clarification:target {
-        opacity: 1;
-        position: static;
-        height: auto;
-        padding: .4em .5em;
       }
 
 
@@ -275,7 +250,6 @@
         padding: .5em 1em 1em;
         margin: .5em 0 1em;
       }
-
 
 
       /*----------------------------------------------------------------------------*\
@@ -401,12 +375,14 @@
 
         <div class="col">
 
-          <div class="keys-block  keys-block--1"
+          <div class="keys-block keys-block--1"
                id="subl-keys-select">
             <h2 class="keys-block__name">Выделение</h2>
             <ul class="keys-block__list">
               <li id="subl-keys-select-1">
-                <div class="keys keys--descr">Выделить слово, в котором курсор <br>
+                <div class="keys keys--descr">
+                  <p>Выделить слово, в котором курсор</p>
+                  <small>Add selection for next occurrence</small>
                   <small>(2× — выделение совпадающих)</small>
                 </div>
                 <div class="keys keys--os"><kbd>Cmd<span class="plus">+</span>D</kbd>
@@ -458,12 +434,15 @@
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--2"
+          <div class="keys-block keys-block--2"
                id="subl-keys-search">
             <h2 class="keys-block__name">Поиск</h2>
             <ul class="keys-block__list">
               <li id="subl-keys-search-1">
-                <div class="keys keys--descr">Поиск конкретного файла в проекте</div>
+                <div class="keys keys--descr">
+                  <p>Поиск конкретного файла в проекте</p>
+                  <small>Go to file</small>
+              </div>
                 <div class="keys keys--os">
                   <kbd>Cmd<span class="plus">+</span>P</kbd>
                 </div>
@@ -579,7 +558,7 @@
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--3"
+          <div class="keys-block keys-block--3"
                id="subl-keys-blocks">
             <h2 class="keys-block__name">Блоки кода</h2>
             <ul class="keys-block__list">
@@ -611,7 +590,7 @@
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--4"
+          <div class="keys-block keys-block--4"
                id="subl-keys-tabs">
             <h2 class="keys-block__name">Вкладки</h2>
             <ul class="keys-block__list">
@@ -622,7 +601,10 @@
                 </div>
               </li>
               <li id="subl-keys-tabs-2">
-                <div class="keys keys--descr">Закрыть вкладку</div>
+                <div class="keys keys--descr">
+                  <p>Закрыть вкладку</p>
+                  <small>Close active editor tab</small>
+                </div>
                 <div class="keys keys--os">
                   <kbd>Cmd<span class="plus">+</span>W</kbd>
                 </div>
@@ -682,7 +664,7 @@
         </div>
 
         <div class="col">
-          <div class="keys-block  keys-block--5"
+          <div class="keys-block keys-block--5"
                id="subl-keys-text">
             <h2 class="keys-block__name">Текст</h2>
             <ul class="keys-block__list">
@@ -717,7 +699,9 @@
                 </div>
               </li>
               <li id="subl-keys-text-6">
-                <div class="keys keys--descr">Продублировать текст <br>
+                <div class="keys keys--descr">
+                  <p>Продублировать текст / строку</p>
+                  <small>Duplicate line or selection</small>
                   <small>(выделен фрагмент текста)</small>
                 </div>
                 <div class="keys keys--os">
@@ -747,7 +731,7 @@
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--6"
+          <div class="keys-block keys-block--6"
                id="subl-keys-lines">
             <h2 class="keys-block__name">Строки</h2>
             <ul class="keys-block__list">
@@ -794,7 +778,9 @@
                 </div>
               </li>
               <li id="subl-keys-lines-6">
-                <div class="keys keys--descr">Продублировать строку <br>
+                <div class="keys keys--descr">
+                  <p>Продублировать строку / текст</p>
+                  <small>Duplicate line or selection</small>
                   <small>(нет выделения)</small>
                 </div>
                 <div class="keys keys--os">
@@ -827,7 +813,7 @@
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--7"
+          <div class="keys-block keys-block--7"
                id="subl-keys-goto">
             <h2 class="keys-block__name">Переходы</h2>
             <ul class="keys-block__list">
@@ -872,7 +858,7 @@
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--8"
+          <div class="keys-block keys-block--8"
                id="subl-keys-cursor">
             <h2 class="keys-block__name">Курсор</h2>
             <ul class="keys-block__list">
@@ -891,13 +877,13 @@
               <li id="subl-keys-cursor-3">
                 <div class="keys keys--descr">Добавить мультикурсор</div>
                 <div class="keys keys--os">
-                  <kbd>Cmd<span class="plus">+</span>ЛКМ</kbd>
+                  <kbd>Cmd<span class="plus">+</span>Left mouse click</kbd>
                 </div>
               </li>
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--9"
+          <div class="keys-block keys-block--9"
                id="subl-keys-layouts">
             <h2 class="keys-block__name">Внешний вид</h2>
             <ul class="keys-block__list">
@@ -946,7 +932,7 @@
             </ul>
           </div>
 
-          <div class="keys-block  keys-block--11"
+          <div class="keys-block keys-block--11"
                id="subl-keys-other">
             <h2 class="keys-block__name">Разное</h2>
             <ul class="keys-block__list">
