@@ -800,22 +800,27 @@
                 </div>
               </li>
               <li id="subl-keys-lines-5">
-                <div class="keys keys--descr">Поднять строку вверх</div>
+                <div class="keys keys--descr">
+                  <p>Поднять строку вверх</p>
+                  <small>Move line up</small>
+                </div>
                 <div class="keys keys--os">
-                  <kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span><span class="icon-up"></span></kbd>
+                  <kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-up"></span></kbd>
                 </div>
               </li>
               <li id="subl-keys-lines-5">
-                <div class="keys keys--descr">Опустить строку вниз</div>
+                <div class="keys keys--descr">
+                  <p>Опустить строку вниз</p>
+                  <small>Move line down</small>
+                </div>
                 <div class="keys keys--os">
-                  <kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span><span class="icon-down"></span></kbd>
+                  <kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-down"></span></kbd>
                 </div>
               </li>
               <li id="subl-keys-lines-6">
                 <div class="keys keys--descr">
                   <p>Продублировать строку / текст</p>
                   <small>Duplicate line or selection</small>
-                  <small>(нет выделения)</small>
                 </div>
                 <div class="keys keys--os">
                   <kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>D</kbd>
@@ -834,14 +839,17 @@
                 </div>
               </li>
               <li id="subl-keys-lines-9">
-                <div class="keys keys--descr">Удалить строку, в которой курсор</div>
+                <div class="keys keys--descr">
+                  <p>Удалить строку, на которой курсор</p>
+                  <small>Delete line</small>
+                </div>
                 <div class="keys keys--os">
-                  <kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>K</kbd>
+                  <kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>K</kbd>
                 </div>
               </li>
               <li id="subl-keys-lines-10">
                 <div class="keys keys--descr">Объединить строки</div>
-                <div class="keys keys--os"><kbd>Cmd<span class="plus">+</span>J</kbd>
+                <div class="keys keys--os"><kbd>Cmd + J</kbd>
                 </div>
               </li>
             </ul>
@@ -849,7 +857,7 @@
 
           <div class="keys-block keys-block--7"
                id="subl-keys-goto">
-            <h2 class="keys-block__name">Переходы</h2>
+            <h2 class="keys-block__name">Navigation</h2>
             <ul class="keys-block__list">
               <li id="subl-keys-goto-1">
                 <div class="keys keys--descr">
@@ -910,6 +918,24 @@
                   <kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>F2</kbd>
                 </div>
               </li>
+              <li id="subl-keys-goto-9">
+                <div class="keys keys--descr">Navigate Back</div>
+                <div class="keys keys--os">
+                  <kbd>Cmd<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-left"></span></kbd>
+                </div>
+              </li>
+              <li id="subl-keys-goto-10">
+                <div class="keys keys--descr">Navigate Forward</div>
+                <div class="keys keys--os">
+                  <kbd>Cmd<span class="plus">+</span>Alt<span class="plus">+</span><span class="icon-right"></span></kbd>
+                </div>
+              </li>
+              <li id="subl-keys-goto-11">
+                <div class="keys keys--descr">Go to declatation or usages</div>
+                <div class="keys keys--os">
+                  <kbd>F12</kbd>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -918,21 +944,39 @@
             <h2 class="keys-block__name">Курсор</h2>
             <ul class="keys-block__list">
               <li id="subl-keys-cursor-1">
-                <div class="keys keys--descr">Добавить курсор на стр. выше или ниже</div>
+                <div class="keys keys--descr">
+                  <p>Добавить курсор на строке выше</p>
+                  <small>Clone caret above</small>
+                </div>
                 <div class="keys keys--os">
-                  <kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-up"></span><span class="slash">/</span><span class="icon-down"></span></kbd>
+                  <kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-up"></span></kbd>
                 </div>
               </li>
               <li id="subl-keys-cursor-2">
-                <div class="keys keys--descr">Убрать мультикурсор</div>
+                <div class="keys keys--descr">
+                  <p>Добавить курсор на строке ниже</p>
+                  <small>Clone caret below</small>
+                </div>
                 <div class="keys keys--os">
-                  <kbd>Esc</kbd>
+                  <kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span><span class="icon-down"></span></kbd>
                 </div>
               </li>
               <li id="subl-keys-cursor-3">
-                <div class="keys keys--descr">Добавить мультикурсор</div>
+                <div class="keys keys--descr">
+                  <p>Добавить или удалить мультикурсор</p>
+                  <small>Add or remove caret</small>
+                </div>
                 <div class="keys keys--os">
-                  <kbd>Cmd<span class="plus">+</span>Left mouse click</kbd>
+                  <kbd>Cmd<span class="plus">+</span>Button 1 click</kbd>
+                </div>
+              </li>
+              <li id="subl-keys-cursor-4">
+                <div class="keys keys--descr">
+                  <p>Убрать мультикурсор</p>
+                  <small>Remove all multiple carets</small>
+                </div>
+                <div class="keys keys--os">
+                  <kbd>Esc</kbd>
                 </div>
               </li>
             </ul>
@@ -948,7 +992,8 @@
                   <small>Toggle full screen mode</small>
                 </div>
                 <div class="keys keys--os">
-                  <kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>F</kbd></div>
+                  <kbd>Ctrl<span class="plus">+</span>Cmd<span class="plus">+</span>F</kbd>
+                </div>
               </li>
               <li id="subl-keys-layouts-2">
                 <div class="keys keys--descr">
@@ -965,20 +1010,23 @@
                   <kbd>Alt<span class="plus">+</span>Cmd<span class="plus">+</span>1...4</kbd>
                 </div>
               </li>
-              </tr>
               <li id="subl-keys-layouts-4">
                 <div class="keys keys--descr">Области ред-я сеткой 2×2</div>
-                <div class="keys keys--os"><kbd>Alt<span class="plus">+</span>Cmd<span class="plus">+</span>5</kbd></div>
+                <div class="keys keys--os">
+                  <kbd>Alt<span class="plus">+</span>Cmd<span class="plus">+</span>5</kbd>
+                </div>
               </li>
               <li id="subl-keys-layouts-5">
                 <div class="keys keys--descr">Области ред-я в две линии</div>
-                <div class="keys keys--os"><kbd>Alt<span class="plus">+</span>Shift<span
-                          class="plus">+</span>Cmd<span class="plus">+</span>2</kbd></div>
+                <div class="keys keys--os">
+                  <kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>Cmd<span class="plus">+</span>2</kbd>
+                </div>
               </li>
               <li id="subl-keys-layouts-6">
                 <div class="keys keys--descr">Области ред-я в три линии</div>
-                <div class="keys keys--os"><kbd>Alt<span class="plus">+</span>Shift<span
-                          class="plus">+</span>Cmd<span class="plus">+</span>3</kbd></div>
+                <div class="keys keys--os">
+                  <kbd>Alt<span class="plus">+</span>Shift<span class="plus">+</span>Cmd<span class="plus">+</span>3</kbd>
+                </div>
               </li>
               <li id="subl-keys-layouts-7">
                 <div class="keys keys--descr">Перейти к области ред-я с номером</div>
@@ -993,8 +1041,7 @@
             </ul>
           </div>
 
-          <div class="keys-block keys-block--11"
-               id="subl-keys-other">
+          <div class="keys-block keys-block--11" id="subl-keys-other">
             <h2 class="keys-block__name">Разное</h2>
             <ul class="keys-block__list">
               <li id="subl-keys-other-1">
@@ -1010,15 +1057,33 @@
                 </div>
               </li>
               <li id="subl-keys-other-3">
-                <div class="keys keys--descr">Create new scratch file</div>
+                <div class="keys keys--descr">Generate code</div>
                 <div class="keys keys--os">
-                  <kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>N</kbd>
+                  <kbd>Ctrl<span class="plus">+</span>Shift<span class="plus">+</span>N</kbd>
                 </div>
               </li>
               <li id="subl-keys-other-4">
-                <div class="keys keys--descr">Go to declatation or usages</div>
+                <div class="keys keys--descr">Reformat code</div>
                 <div class="keys keys--os">
-                  <kbd>F12</kbd>
+                  <kbd>Cmd<span class="plus">+</span>Ctrl<span class="plus">+</span>L</kbd>
+                </div>
+              </li>
+              <li id="subl-keys-other-5">
+                <div class="keys keys--descr">New in this directory file</div>
+                <div class="keys keys--os">
+                  <kbd>Cmd<span class="plus">+</span>Ctrl<span class="plus">+</span>N</kbd>
+                </div>
+              </li>
+              <li id="subl-keys-other-6">
+                <div class="keys keys--descr">New file</div>
+                <div class="keys keys--os">
+                  <kbd>Cmd<span class="plus">+</span>N</kbd>
+                </div>
+              </li>
+              <li id="subl-keys-other-7">
+                <div class="keys keys--descr">New scratch file</div>
+                <div class="keys keys--os">
+                  <kbd>Cmd<span class="plus">+</span>Shift<span class="plus">+</span>N</kbd>
                 </div>
               </li>
             </ul>
