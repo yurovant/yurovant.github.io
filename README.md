@@ -1,3 +1,3 @@
-# yurovant.github.io
+# My snippets
 
-TODO: Put some folders with `index.html` in the root.
+[Link](https://yurovant.github.io/codepen/)
