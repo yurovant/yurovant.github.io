@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[JS] IntersectionObserver example with video playback</title>
+  </head>
+  <body style="padding-top: 2000px">
+    <video
+      id="vid"
+      src="https://assets.codepen.io/39255/output_960.mp4"
+      loop
+    ></video>
+    <script>
+      let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("video is visible");
+            console.log("video is ", vid);
+            vid.play();
+          } else {
+            vid.pause();
+          }
+        });
+      });
+
+      observer.observe(vid);
+    </script>
+  </body>
+</html>

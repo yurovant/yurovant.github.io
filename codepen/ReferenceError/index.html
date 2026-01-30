@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[JS] ReferenceError message for testing across browsers</title>
+  </head>
+  <body>
+    <script>
+      try {
+        x + 5;
+      } catch (error) {
+        document.body.textContent = error.message;
+
+        if (
+          error instanceof ReferenceError &&
+          /is (not |un)defined$|^(Can't find|Undefined) variable/.test(
+            error.message
+          )
+        ) {
+          alert("Test");
+        }
+      }
+    </script>
+  </body>
+</html>
