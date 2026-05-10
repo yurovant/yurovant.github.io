@@ -1,0 +1,52 @@
+JAVA AND SDKMAN CLEAN INSTALL GUIDE (MACOS / BASH 5.3)
+
+To give you a fresh start, we will perform a "scorched earth" removal of your current Java and SDKMAN setups, and then reinstall using the correct path for your modern Bash 5.3.
+
+PART 1: THE "SCORCHED EARTH" REMOVAL
+Run these commands to delete existing SDKMAN files and any broken system links:
+
+Remove SDKMAN folder:
+rm -rf ~/.sdkman
+
+Remove the system link (if it exists):
+sudo rm -f /Library/Java/JavaVirtualMachines/openjdk-26.jdk
+
+Clean your Profile:
+Open your profile by running: nano ~/.bash_profile
+Look for any lines containing "SDKMAN" or "JAVA_HOME" and delete them.
+Save and exit: Press Ctrl+O, then Enter, then Ctrl+X.
+
+PART 2: THE CLEAN INSTALLATION
+Now that the slate is clean, follow these steps exactly:
+
+Install SDKMAN!
+curl -s "https://get.sdkman.io" | bash
+
+Initialize it for your current session:
+export SDKMAN_DIR="$HOME/.sdkman"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+Install the most modern Open-Source Java (Temurin 26):
+sdk install java 26-tem
+(Wait for the download to finish. If it asks to set as default, type Y.)
+
+The "Mac Fix" (Crucial Step):
+Because you are on a Mac, the terminal might still look at /usr/bin/java. We will "bridge" SDKMAN to the system level so macOS is happy:
+sudo ln -sfn $HOME/.sdkman/candidates/java/26-tem/Contents/Home /Library/Java/JavaVirtualMachines/openjdk-26.jdk
+
+PART 3: FINAL VERIFICATION
+
+Restart your Terminal (Close the window and open a new one).
+
+Check the path:
+which java
+(It should now point to your home directory: /Users/.../.sdkman/...)
+
+Check the version:
+java -version
+
+WHY THIS WORKS:
+
+Removal: Clears "ghost" files that were partially configured.
+
+The Bridge: The "ln -sfn" command satisfies the macOS system wrapper (/usr/bin/java) by giving it a valid folder to look into, while still letting SDKMAN manage the actual files.
