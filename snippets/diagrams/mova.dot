@@ -1,0 +1,48 @@
+// Requires GraphViz
+// brew install graphviz
+// dot -Tsvg mova.dot -o mova.svg
+
+digraph G {
+    fontname="Helvetica,Arial,sans-serif"
+    node [fontname="Helvetica,Arial,sans-serif", shape=box, style="rounded,filled", fillcolor="#f9f9f9"]
+    edge [fontname="Helvetica,Arial,sans-serif", color="#444444"]
+
+    // Root
+    National [label="Національна\nмова", fillcolor="#e1f5fe"]
+
+    // Level 1
+    Literary [label="Літературна\nмова"]
+    Dialects [label="Діалекти"]
+
+    // Level 2
+    Styles [label="Функціональні\nстилі"]
+    Territorial [label="Територіальні\nдіалекти"]
+    Social [label="Соціальні\nдіалекти"]
+
+    // Level 3 (Territorial)
+    Hovir [label="Говір"]
+    Hovirka [label="Говірка"]
+
+    // Level 3 (Social)
+    Slang [label="Сленг"]
+    Jargon [label="Жаргон"]
+    Professional [label="Професійна\nмова"]
+    Sociolects [label="Соціолекти"]
+
+    // Relationships
+    National -> Literary
+    National -> Dialects
+
+    Literary -> Styles
+
+    Dialects -> Territorial
+    Dialects -> Social
+
+    Territorial -> Hovir
+    Territorial -> Hovirka
+
+    Social -> Slang
+    Social -> Jargon
+    Social -> Professional
+    Social -> Sociolects
+}
